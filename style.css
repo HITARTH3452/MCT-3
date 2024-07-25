@@ -1,0 +1,253 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #f8f9fa;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: fixed; /* Fixes the navbar to the top of the page */
+    top: 0; /* Aligns it to the top */
+    width: 100%; 
+    background-color: #f8f9fa;
+    left: 0;
+    height: 68px;
+    padding: 0px 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2a2a2a;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    margin: 0 20px;
+    min-width: 300px;
+}
+
+.search-container select {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.search-box {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    position: relative;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 8px 40px 8px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.search-box button {
+    position: absolute;
+    right: 10px;
+    padding: 8px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #007bff;
+    font-size: 16px;
+}
+
+.login-container {
+    display: flex;
+    align-items: center;
+}
+
+.login-container span {
+    margin-right: 20px;
+}
+
+.login-container a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #007bff;
+}
+
+.sell-button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+
+nav {
+    background-color: #fff;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+    overflow-x: auto;
+}
+
+.categories {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+.categories li {
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.advertisement {
+    text-align: center;
+    padding: 20px;
+    color: #aaa;
+    font-size: 14px;
+    border-top: 1px solid #ddd;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .search-container {
+        margin: 10px 0;
+        width: 100%;
+    }
+    
+    .login-container {
+        margin-top: 10px;
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .login-container span, .login-container a, .sell-button {
+        margin-right: 10px;
+    }
+    
+    nav {
+        padding: 10px 0;
+    }
+    
+    .categories {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .categories li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 20px;
+    }
+
+    .search-container select, 
+    .search-box input,
+    .search-box button,
+    .sell-button {
+        padding: 6px;
+    }
+
+    .search-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .search-box {
+        margin-top: 10px;
+    }
+    
+    .login-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .login-container span, .login-container a, .sell-button {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+
+/* styles.css */
+
+/* Product Container */
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(308px, 1fr));
+    gap: 5px; /* Gap between cards */
+    padding: 5px; /* Padding around the grid */
+}
+
+/* Product Card */
+.product-card {
+    width: 308px; /* Fixed width */
+    height: 264px; /* Fixed height */
+    border: 1px solid #ddd; /* Border for the card */
+    border-radius: 4px; /* Rounded corners */
+    overflow: hidden; /* Hide overflow */
+    background-color: #fff; /* White background */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: space-between; /* Space between items */
+}
+
+.product-card img {
+    width: 292px; /* Image width */
+    height: 160px; /* Image height */
+    margin: 5px; /* Margin around the image */
+}
+
+.product-info {
+    padding: 5px; /* Padding inside the info section */
+}
+
+.price {
+    font-weight: bold; /* Bold price */
+    margin: 0; /* Remove default margin */
+}
+
+.product-name, .address {
+    margin: 2px 0; /* Small margin for name and address */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .product-container {
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+
+    .product-card {
+        width: 100%; /* Full width on mobile */
+        height: auto; /* Auto height */
+    }
+
+    .product-card img {
+        width: 100%; /* Responsive image */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
